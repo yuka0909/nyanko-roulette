@@ -1,0 +1,91 @@
+
+body, html {
+    margin:0; padding:0;
+    font-family: "Hiragino Maru Gothic ProN", sans-serif;
+    background:#fffafc; height:100%;
+  }
+  .container {
+    text-align:center;
+    padding:40px;
+  }
+  .cat-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .cat {
+    width: 90vw;
+    max-width:400px;
+  }
+  .part-btn {
+    position: absolute;
+    width:30px; height:30px;
+    background: rgba(255,255,255,0.2);
+    border:2px solid rgba(0,0,0,0.1);
+    border-radius:50%;
+    cursor:pointer;
+  }
+  .reaction {
+    margin:20px;
+    font-size: 24px;
+    min-height: 30px;
+  }
+  .btn {
+    padding:10px 20px;
+    background:#87d3e4;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+  }
+
+  .scratch {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-size: 28px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px red;
+    z-index: 999;
+    animation: shake 0.4s ease-in-out;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+@keyframes shake {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-48%, -50%) rotate(2deg); }
+    50% { transform: translate(-52%, -50%) rotate(-2deg); }
+    75% { transform: translate(-49%, -50%) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+
+  .scratch-img {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    animation: shake 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+@media (max-width: 600px) {
+    .cat {
+      width: 100vw;
+    }
+  
+    .reaction {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }

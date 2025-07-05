@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>にゃんこロシアンルーレット</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐾 にゃんこロシアンルーレット</h1>
+    <div class="cat-wrapper">
+      <img src="cat.png" alt="ラグドール猫" class="cat">
+      <!-- タップ部位 ボタン -->
+      <button class="part-btn" data-part="頭" style="top:10%; left: 40%;"></button>
+      <button class="part-btn" data-part="あご" style="top:38%; left:40%;"></button>
+      <button class="part-btn" data-part="おなか" style="top:56%; left:40%;"></button>
+      <button class="part-btn" data-part="背中" style="top:45%; left:65%;"></button>
+      <button class="part-btn" data-part="手" style="top:75%; left:33%;"></button>
+      <button class="part-btn" data-part="足" style="top:78%; left:58%;"></button>
+      <button class="part-btn" data-part="おしり" style="top:63%; left:70%;"></button>
+      <button class="part-btn" data-part="しっぽ" style="top:70%; left:80%;"></button>
+    </div>
+    <div id="reaction" class="reaction">どこをなでる？</div>
+    
+    <label for="round-select">チャレンジ回数：</label>
+    <select id="round-select">
+      <option value="3">3回</option>
+      <option value="5" selected>5回</option>
+    </select>
+
+    <div id="results" style="margin-top:20px; text-align:left; max-width:400px; margin-left:auto; margin-right:auto;"></div>
+
+    <button id="next" class="btn">次のラウンド</button>
+    <!-- 失敗時アニメーション -->
+    <div id="scratch" class="scratch hidden">😾💥 引っかかれた！</div>
+    <img id="scratch-img" src="scratch.png" class="scratch-img hidden" alt="引っかき">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
