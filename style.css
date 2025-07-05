@@ -28,7 +28,10 @@ h1 {
 
 .cat {
   width: 90vw;
-  max-width:400px;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .part-btn {
