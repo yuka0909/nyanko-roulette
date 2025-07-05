@@ -65,11 +65,11 @@ document.querySelectorAll('.part-btn').forEach(btn => {
       resultsEl.innerHTML += `<div>${currentRound}回目： ❌ </div>`;
     } else {
       reaction.textContent = `⭕️ ゴロゴロ…`;
-      resultsEl.innerHTML = `<div>${currentRound}回目： ⭕️ </div>`;
+      resultsEl.innerHTML += `<div>${currentRound}回目： ⭕️ </div>`;
 
       if (currentRound >= maxRounds) {
         gameOver = true;
-        reaction.textContent += " 〜クリア！〜";
+        reaction.textContent = " 〜クリア！〜";
       }
     }
   });
