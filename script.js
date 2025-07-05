@@ -4,7 +4,7 @@ let danger = [];
 const dangerMessages = ["シャーッ！！"];
 const safeMessages = ["ゴロゴロ…"];
 
-let maxRounds = 5;
+let maxRounds = 3;
 let currentRound = 0;
 let gameOver = false;
 let tappedParts = new Set(); // ← 押された部位を記録
@@ -59,13 +59,13 @@ document.querySelectorAll('.part-btn').forEach(btn => {
       scratchImg.classList.remove('hidden');
       setTimeout(() => {
         scratchImg.classList.add('hidden');
-        reaction.textContent = `❌ シャーッ！！ 失敗！ゲーム終了`;
+        reaction.textContent = `❌ シャーッ！！ 失敗！`;
       }, 1000);
 
       resultsEl.innerHTML += `<div>${currentRound}回目： ❌ </div>`;
     } else {
       reaction.textContent = `⭕️ ゴロゴロ…`;
-      resultsEl.innerHTML += `<div>${currentRound}回目： ⭕️ </div>`;
+      resultsEl.innerHTML = `<div>${currentRound}回目： ⭕️ </div>`;
 
       if (currentRound >= maxRounds) {
         gameOver = true;
